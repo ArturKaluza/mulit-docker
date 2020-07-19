@@ -14,7 +14,7 @@ after_success:
     - docker build -t arturkaluza3/multi-server ./server
     - docker build -t arturkaluza3/multi-nginx ./nginx    
     - docker build -t arturkaluza3/multi-worker ./worker 
-    - echo "$ODCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
     - docker push arturkaluza3/multi-client
     - docker push arturkaluza3/multi-server 
     - docker push arturkaluza3/multi-nginx 
